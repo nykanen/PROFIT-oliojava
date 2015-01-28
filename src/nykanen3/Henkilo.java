@@ -1,4 +1,4 @@
-package nykanen;
+package nykanen3;
 /**
  * Luokka henkilotietojen kasittelyyn.
  * 
