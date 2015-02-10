@@ -2,27 +2,36 @@ package nykanen4;
 
 import fi.jyu.mit.graphics.EasyWindow;
 
-public class Kuvio {
-    private int x;
-    private int y;
-    public EasyWindow window;
+public abstract class Kuvio {
+    protected double x;
+    protected double y;
     
     public Kuvio() {
         x = 100;
         y = 100;
     }
     
-    public int[] getCoordinates() {
-        int [] coordinates = {x, y};
+    /**
+     * @return coordinates of the object's anchor
+     */
+    public double[] getAnchor() {
+        double [] coordinates = {x, y};
         return coordinates;
     }
     
-    public void setCoordinates(int newX, int newY) {
+    
+    /**
+     * Method for setting object's anchor
+     * 
+     * @param newX
+     * @param newY
+     */
+    public void setAnchor(double newX, double newY) {
         x = newX;
         y = newY;
     }
     
-    public void drawObject() {
+    public void drawObject(EasyWindow w) {
         
     }
 }
